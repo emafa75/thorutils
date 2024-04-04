@@ -1,0 +1,25 @@
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+#popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+button {
+  padding: .5rem .2rem;
+}
+
+pre {
+  font-family: monospace;
+  font-size: .8rem;
+}
+
+#err {
+  color: red;
+}
+

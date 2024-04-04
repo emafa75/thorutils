@@ -5,6 +5,12 @@
 
   "description": "Add some stuff for enseirb-matmeca forge",
 
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+
+
   "icons": {
     "100": "icons/logo.png"
   },
@@ -14,6 +20,12 @@
       "matches": ["*://thor.enseirb-matmeca.fr/ruby/repositories/*"],
       "js": ["beautifier.js", "refresh.js"]
     }
-  ]
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/logo.png",
+    "default_title": "thorutils controls",
+    "default_popup": "popup/control.html"
+  }
 }
 

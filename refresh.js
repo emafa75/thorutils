@@ -1,20 +1,32 @@
+let intervalID = null;
+const refreshRate = 5000;
 
-// Create infinite refresh button
-const infiniteRefreshButton = document.createElement("button");
-const infiniteRefreshContent = document.createTextNode("Infinite Refresh");
-infiniteRefreshButton.appendChild(infiniteRefreshContent);
 // set script
 const refreshButton = document.querySelector("a.btn")
-let script = refreshButton.getAttribute("onClick");
-infiniteRefreshButton.setAttribute("onClick", `let intervalId = setInterval(() => { ${script} }, 1000); `);
 
-// Create reset button
-const resetButton = document.createElement("button");
-const resetButtonText = document.createTextNode("Stop spam");
-resetButton.appendChild(resetButtonText);
-resetButton.setAttribute("id", "resetSpam");
+function refresh() {
+  refreshButton.click();
+}
 
-// Place Infinite refresh button and reset
-const container = document.getElementsByClassName("container")[0];
-container.insertBefore(infiniteRefreshButton, container.lastElementChild);
-container.insertBefore(resetButton, container.lastElementChild);
+function startRefresh(_refreshRate) {
+  if (intervalID !== null)
+    return;
+
+  if (typeof _refreshRate === 'number' && _refreshRate) {
+    intervalID = setInterval(refresh, _refreshRate);
+    console.log(`Start auto-refresh, rate: ${_refreshRate}`);
+  }
+  else {
+    intervalID = setInterval(refresh, refreshRate);
+    console.log(`Start auto-refresh, rate: ${refreshRate}`);
+  }
+}
+
+function stopRefresh() {
+  if (intervalID !== null) {
+    clearInterval(intervalID);
+    intervalID = null;
+
+    console.log("Stopped auto-refreshing");
+  }
+}
