@@ -1,0 +1,120 @@
+/*
+ * Regular text
+*/
+
+.ansi_BLK { color: #000; }
+.ansi_RED { color: #F00; }
+.ansi_GRN { color: #0F0; }
+.ansi_YEL { color: #FF0; }
+.ansi_BLU { color: #00F; }
+.ansi_MAG { color: #F0F; }
+.ansi_CYN { color: #0FF; }
+.ansi_WHT { color: #FFF; }
+
+
+/*
+ * Bold text
+*/
+
+.ansi_BBLK { font-weight: bold; color:  #000; }
+.ansi_BRED { font-weight: bold; color: #F00; }
+.ansi_BGRN { font-weight: bold; color: #0F0; }
+.ansi_BYEL { font-weight: bold; color: #FF0; }
+.ansi_BBLU { font-weight: bold; color: #00F; }
+.ansi_BMAG { font-weight: bold; color: #F0F; }
+.ansi_BCYN { font-weight: bold; color: #0FF; }
+.ansi_BWHT { font-weight: bold; color: #FFF; }
+.ansi_BOLD { font-weight: bold; }
+
+
+/*
+ * Underline text
+*/
+
+.ansi_UBLK { text-decoration: underline; color:  #000; }
+.ansi_URED { text-decoration: underline; color: #F00; }
+.ansi_UGRN { text-decoration: underline; color: #0F0; }
+.ansi_UYEL { text-decoration: underline; color: #FF0; }
+.ansi_UBLU { text-decoration: underline; color: #00F; }
+.ansi_UMAG { text-decoration: underline; color: #F0F; }
+.ansi_UCYN { text-decoration: underline; color: #0FF; }
+.ansi_UWHT { text-decoration: underline; color: #FFF; }
+
+
+/*
+ * Highlighted text
+*/
+
+.ansi_BLKB { background-color: #000; }
+.ansi_REDB { background-color: #F00; }
+.ansi_GRNB { background-color: #0F0; }
+.ansi_YELB { background-color: #FF0; }
+.ansi_BLUB { background-color: #00F; }
+.ansi_MAGB { background-color: #F0F; }
+.ansi_CYNB { background-color: #0FF; }
+.ansi_WHTB { background-color: #FFF; }
+
+
+/*
+ * High intensty background
+ * Highlighted text
+*/
+
+/*
+.ansi_BLKHB { color: 100m }
+.ansi_REDHB { color: 101m }
+.ansi_GRNHB { color: 102m }
+.ansi_YELHB { color: 103m }
+.ansi_BLUHB { color: 104m }
+.ansi_MAGHB { color: 105m }
+.ansi_CYNHB { color: 106m }
+.ansi_WHTHB { color: 107m }
+*/
+
+/*
+ * High intensty texts
+ * Highlighted text
+*/
+
+/*
+.ansi_HBLK { color: 90m }
+.ansi_HRED { color: 91m }
+.ansi_HGRN { color: 92m }
+.ansi_HYEL { color: 93m }
+.ansi_HBLU { color: 94m }
+.ansi_HMAG { color: 95m }
+.ansi_HCYN { color: 96m }
+.ansi_HWHT { color: 97m }
+*/
+
+/*
+ * Bold high intensty texts
+ * Highlighted text
+*/
+
+/*
+.ansi_BHBLK { font-weight: bold; color: 90m }
+.ansi_BHRED { font-weight: bold; color: 91m }
+.ansi_BHGRN { font-weight: bold; color: 92m }
+.ansi_BHYEL { font-weight: bold; color: 93m }
+.ansi_BHBLU { font-weight: bold; color: 94m }
+.ansi_BHMAG { font-weight: bold; color: 95m }
+.ansi_BHCYN { font-weight: bold; color: 96m }
+.ansi_BHWHT { font-weight: bold; color: 97m }
+*/
+
+/*
+ * Blinking text
+*/
+/*
+.ansi_BLINK { \033[5m }
+*/
+
+
+/*
+// Reset
+.ansi_reset { \e[0m }
+.ansi_CRESET { \e[0m }
+.ansi_COLOR_RESET { \e[0m }
+.ansi_BLINK_RESET { \033[0m }
+*/
