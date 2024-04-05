@@ -3,11 +3,16 @@
   "name": "Thor Utils",
   "version": "1.0",
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ndacremont@enseirb-matmeca.fr"
+    }
+  },
+
   "description": "Add some stuff for enseirb-matmeca forge",
 
   "permissions": [
-    "activeTab",
-    "tabs"
+    "activeTab"
   ],
 
 
