@@ -23,7 +23,8 @@
   "content_scripts": [
     {
       "matches": ["*://thor.enseirb-matmeca.fr/ruby/repositories/*"],
-      "js": ["beautifier.js", "refresh.js"]
+      "js": ["beautifier.js", "refresh.js"],
+      "css": ["ansi.css"]
     }
   ],
 
