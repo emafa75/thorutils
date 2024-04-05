@@ -1,0 +1,16 @@
+{
+  "name": "thorutils",
+  "version": "1.0.0",
+  "description": "## Installation",
+  "main": "beautifier.js",
+  "scripts": {
+    "build": "web-ext build",
+    "sign": "web-ext sign"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "web-ext": "^7.11.0"
+  }
+}
