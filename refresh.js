@@ -6,6 +6,7 @@ const refreshButton = document.querySelector("a.btn")
 
 function refresh() {
   refreshButton.click();
+  beautify();
 }
 
 function startRefresh(_refreshRate) {
