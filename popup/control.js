@@ -7,6 +7,8 @@ let refreshRate = 5000;
 const refreshRateInput = document.getElementById('refresh-rate');
 const startRefreshButton = document.getElementById('start-refresh');
 const stopRefreshButton = document.getElementById('stop-refresh');
+const forceBeautifyButton = document.getElementById('force-beautify');
+
 const errorContent = document.getElementById('err');
 
 function getActiveTab() {
@@ -73,6 +75,19 @@ function stopRefresh() {
   });
 }
 
+function forceBeautify() {
+  getActiveTab().then((tabs) => {
+    if (tabs.length === 0)
+      throw new Error('You must be on a thor repository')
+
+    browser.tabs.executeScript(tabs[0].id, {
+      code: `beautify()`
+    });
+  }).catch(e => {
+    errorDisplay(e.message);
+  });
+}
+
 if (startRefreshButton)
   startRefreshButton.addEventListener('click', startRefresh);
 
@@ -82,3 +97,5 @@ if (stopRefreshButton)
 if (refreshRateInput)
   refreshRateInput.addEventListener('change', updateRefreshRate);
 
+if (forceBeautifyButton)
+  forceBeautifyButton.addEventListener('click', forceBeautify);
