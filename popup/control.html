@@ -12,8 +12,13 @@
       <input name="refresh-rate" type="number" value="1000" placeholder="Ex: 5000" step="100" value="" min="500" id="refresh-rate" >
     </div>
 
-    <button id="start-refresh" >Active auto-refresh</button>
-    <button id="stop-refresh" >Stop auto-refresh</button>
+      <div id="refresh-box">
+        <div class="switch">
+          <input id="refresh-button" class="look" type="checkbox">
+          <label for="refresh-button"></label>
+        </div>
+        <div class="refresh-label"> Auto refresh </div>
+      </div>
     <button id="force-beautify" >Force beautify</button>
   </div>
   <pre id="out"></pre>

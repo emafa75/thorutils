@@ -23,3 +23,53 @@ pre {
   color: red;
 }
 
+.switch {
+  position: relative;
+}
+
+.switch label {
+  width: 55px;
+  height: 23px;
+  background-color: #999;
+  position: absolute;
+  left: 0;
+  border-radius: 50px;
+}
+
+.switch input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.switch label:after {
+  content: '';
+  width: 21px;
+  height: 21px;
+  border-radius: 50px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: 100ms;
+  background-color: white;
+}
+
+.switch .look:checked + label:after {
+  left: 32px;
+}
+
+.switch .look:checked + label {
+  background-color: lightsteelblue;
+}
+
+#refresh-box {
+  display: flex;
+}
+
+.switch {
+  width: 55px;
+  height: 23px;
+  padding: 5px;
+}
+
+.refresh-label {
+  padding: 5px;
+}

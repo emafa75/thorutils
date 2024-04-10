@@ -5,9 +5,8 @@ const refreshRateMin = 500;
 let refreshRate = 5000;
 
 const refreshRateInput = document.getElementById('refresh-rate');
-const startRefreshButton = document.getElementById('start-refresh');
-const stopRefreshButton = document.getElementById('stop-refresh');
 const forceBeautifyButton = document.getElementById('force-beautify');
+const refreshButton = document.getElementById('refresh-button');
 
 const errorContent = document.getElementById('err');
 
@@ -88,14 +87,19 @@ function forceBeautify() {
   });
 }
 
-if (startRefreshButton)
-  startRefreshButton.addEventListener('click', startRefresh);
-
-if (stopRefreshButton)
-  stopRefreshButton.addEventListener('click', stopRefresh);
-
 if (refreshRateInput)
   refreshRateInput.addEventListener('change', updateRefreshRate);
 
 if (forceBeautifyButton)
   forceBeautifyButton.addEventListener('click', forceBeautify);
+
+if (refreshButton) {
+  refreshButton.addEventListener('change', function f(){
+    if (this.checked) {
+      startRefresh();
+    } else {
+      stopRefresh();
+    }
+  });
+}
+
