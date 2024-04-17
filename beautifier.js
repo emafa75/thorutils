@@ -7,6 +7,22 @@ const charToAnsi = {
   "\\u001b\\[35m": "MAG",
   "\\u001b\\[36m": "CYN",
   "\\u001b\\[37m": "WHT",
+  "\\u001b\\[0;30m": "BLK",
+  "\\u001b\\[0;31m": "RED",
+  "\\u001b\\[0;32m": "GRN",
+  "\\u001b\\[0;33m": "YEL",
+  "\\u001b\\[0;34m": "BLU",
+  "\\u001b\\[0;35m": "MAG",
+  "\\u001b\\[0;36m": "CYN",
+  "\\u001b\\[0;37m": "WHT",
+  "\\u001b\\[1;30m": "BLK",
+  "\\u001b\\[1;31m": "RED",
+  "\\u001b\\[1;32m": "GRN",
+  "\\u001b\\[1;33m": "YEL",
+  "\\u001b\\[1;34m": "BLU",
+  "\\u001b\\[1;35m": "MAG",
+  "\\u001b\\[1;36m": "CYN",
+  "\\u001b\\[1;37m": "WHT",
   // "\\u001b\\[30m": "BBLK",
   // "\\u001b\\[31m": "BRED",
   // "\\u001b\\[32m": "BGRN",
@@ -67,6 +83,7 @@ const charToAnsi = {
 function beautify() {
   console.log('beautify')
   const stderr = document.querySelectorAll(".stderr");
+  const stdout = document.querySelectorAll(".stdout");
   // const refreshButton = document.querySelector('.btn-group.pull-right');
 
   function beautifyStderr(element){
@@ -88,6 +105,11 @@ function beautify() {
 
   for (let i = 0 ; i < stderr.length ; ++i)
     beautifyStderr(stderr[i]);
+
+  for (let i = 0 ; i < stdout.length ; ++i) {
+    beautifyStderr(stdout[i]);
+    stdout[i].style = "border: .2rem solid green; border-radius: .4rem; color: #000;"
+  }
 }
 
 beautify();
